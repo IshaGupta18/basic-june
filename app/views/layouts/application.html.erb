@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Basicjune</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+	<div>
+		<% if @signed_in_user %>
+			<h4> welcome <%=@signed_in_user.email %> </h4>
+		<% end %>
+	</div>
+    <%= yield %>
+  </body>
+</html>
