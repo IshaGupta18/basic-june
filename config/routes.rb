@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get 'users/sign_in', to: 'users#sign_in'
   post 'users/create_session', to: 'users#create_session'
   get 'users/sign_out', to: 'users#sign_out'
+  root :to => 'users#new'
   #patch 'users/:email',to: 'users#updatelink',as: :user
 
 
